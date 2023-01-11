@@ -1,0 +1,6 @@
+---
+- name: group1
+  hosts: local
+  gather_facts: yes
+  roles:
+     - sample

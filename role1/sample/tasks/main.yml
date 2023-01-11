@@ -1,0 +1,18 @@
+---
+# tasks file for sample
+- name: Connection Check
+  wait_for_connection:
+    delay: 5
+    timeout: 15
+  register: concheck 
+  ignore_errors: true
+
+- name: Connection is success
+  debug: 
+    msg: connnection is successful < "{{ concheck.msg }}"
+  when: concheck is success
+
+- name: Connection is failed
+  fail: 
+    msg: connnection is failed < "{{ concheck.msg }}"
+  when: concheck is failed
