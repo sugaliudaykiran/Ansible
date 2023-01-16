@@ -1,6 +1,6 @@
 ---
 - name: group1
-  hosts: local
+  hosts: all
   gather_facts: yes
   roles:
      - linux_check
