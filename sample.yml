@@ -3,4 +3,4 @@
   hosts: local
   gather_facts: yes
   roles:
-     - sample
+     - linux_check
