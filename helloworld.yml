@@ -1,9 +1,0 @@
----
-- hosts: localhost
-  gather_facts: true
-  become: yes
-  become_user: root
-  become_method: sudo
-  tasks:
-    - name: Hello World!
-      shell: echo "Hi Ansible Tower is Working Fine!"
